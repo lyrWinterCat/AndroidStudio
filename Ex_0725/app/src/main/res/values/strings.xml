@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ex_0725</string>
+
+    <string name="alert_warning">Warning!!</string>
+    <string name="alert_error">Error!!</string>
+    <string name="alert_success">Success!!</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lyr.ex_0726">
+    <!-- 다이렉트로 전화 걸어주는 권한 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 휴대폰 안에 폴더를 생성하거나 파일을 만들거나 기록을 할 때 수락을 받아야 하는 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 주소록에 접근을 할 수 있는 권한 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ex_0726"
+        tools:targetApi="31">
+        <activity
+            android:name=".SqliteActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <activity
+            android:name=".GameSolutionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".PermissionActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinearActivity"
+    android:orientation="vertical">
+
+    <!--
+    맨 윗줄 <?xml ?> 은 건드리지 않는 것이 좋다. >>에러남
+
+    태그 안쪽에서는 주석을 달 수 없음! 항상 바깥에서 달 것 !
+    LinearLayout : 방향성을 가지고 있는 레이아웃
+    orientation : vertical >> 수직정렬
+                 horizontal >> 수평정렬
+
+    TextView 작성시 width, height 값은 무조건 같이 생성됨
+    * 자동완성으로 textview 작성시 꼭 대문자로 시작해 주어야 인식됨
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안녕하세용★"
+        android:background="#F77D7D"
+        android:textSize="25dp"
+        />
+
+    <!--
+    dp : device independens pixel
+    >> 사용중인 디바이스의 해상도에 맞는 pixel값을 계산하여
+    크기를 결정해주는 단위
+    완전히 해결이 되는 해결사는 아니지만 mm보다는 훨씬 더
+    편리한 단위이기 때문에 모든 단위는 dp 값으로 통일한다.
+
+    밑의 텍스트 영역에서 match_parent를 주어도 위의 객체 영역을 침범할 수 없음
+    ** match_parent : 부모의 영역에 내 길이를 맞춤
+    ** wrap_content : content의 길이에 따라 영역의 크기를 맞춤
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="반갑습니당☆"
+        android:background="#DA88E8"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        />
+
+    <!-- Android의 다양한 요소
+    SeekBar : 음량을 조절하는 바
+    ProgressBar : 로딩할 때 뜨는 요소
+    RatingBar : 별점 요소를 매기는 기능
+        - numStars : 최대 별점 개수 조절
+    CheckBox : 체크박스
+        - text로 내용을 주어야 함 (글자크기는 바꿀 수 없음)
+
+    * 간혹 체크박스처럼 크기를 변경하지 못하는 요소도 있음
+    Radiobutton : 라디오버튼 (중복체크 불가)
+        - 따로따로 만들면 중복체크가 가능함 (?)
+        - 따라서 라디오버튼은 라디오 그룹으로 묶어주어야 함
+        : 라디오 그룹 안에 있는 라디오 버튼 속성은 하나만 선택이 가능함
+    -->
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:progressTint="#E7DC81"
+        android:progressBackgroundTint="#737070"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="체크박스"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="영화" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="운동" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="산책" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Btn1"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Btn2"
+            android:layout_marginLeft="5dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Btn3"
+            android:layout_marginLeft="5dp"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아무거나 입력해주세요 아이디같은거?"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="숫자를 입력해주세용"
+        android:inputType="number"/>
+
+</LinearLayout>
